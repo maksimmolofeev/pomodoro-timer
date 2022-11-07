@@ -1,0 +1,157 @@
+//Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+
+%stileButton {
+    width: 100px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 2px solid rgb(0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+%time {
+    font-size: 90px;
+    font-weight: 500;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #000000;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+
+    &__body {
+        width: 100%;
+        height: 550px;
+    }
+
+    &__header {
+        width: 100%;
+        height: 66.66%;
+        padding: 25px 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: rgb(208, 38, 38);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__sub-title {
+        font-size: 25px;
+        font-weight: 500;
+        color: #ffffff;
+    }
+
+    &__timer {
+        max-width: 250px;
+        display: flex;
+    }
+
+    &__time-minut {
+        width: 110px;
+        @extend %time
+    }
+
+    &__time-sign {
+        width: 30px;
+        @extend %time
+    }
+
+    &__time-second {
+        width: 110px;
+        justify-content: flex-start;
+        @extend %time
+    }
+
+    &__button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__start {
+        margin-right: 8px;
+        @extend %stileButton
+    }
+
+    &__reset {
+        margin-left: 8px;
+        @extend %stileButton
+    }
+
+
+    &__row {
+        width: 100%;
+        height: 33.33%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: #ffffff;
+        display: flex;
+    }
+
+    &__column {
+        display: flex;
+        width: 50%;
+    }
+}
+
+.setting {
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__title {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    &__time {
+        display: flex;
+        align-items: center;
+    }
+
+    &__adjustment {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: red;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 3px;
+        cursor: pointer;
+
+    }
+
+    &__time {
+        padding: 0px 8px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}

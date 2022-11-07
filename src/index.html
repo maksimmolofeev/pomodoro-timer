@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro timer</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="container__title">Pomodoro Timer</div>
+    <div class="container__body">
+      <div class="container__header">
+        <div class="container__sub-title">session</div>
+        <div class="container__timer">
+          <div class="container__time-minut">25</div>
+          <div class="container__time-sign">:</div>
+          <div class="container__time-second">00</div>
+        </div>
+        <div class="container__button">
+          <div class="container__start">Start</div>
+          <div class="container__reset">Reset</div>
+        </div>
+      </div>
+
+      <div class="container__row">
+
+        <div class="container__column">
+          <div class="setting">
+            <div class="setting__title">Session Length</div>
+            <div class="setting__time js-setting-session">
+              <div class="setting__adjustment">+</div>
+              <div class="setting__time">
+                <div class="setting__time-number js-session">25</div>
+                <div class="setting_time-unit">min</div>
+              </div>
+              <div class="setting__adjustment">-</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container__column">
+          <div class="setting">
+            <div class="setting__title">Break Length</div>
+            <div class="setting__time js-setting-break">
+              <div class="setting__adjustment">+</div>
+              <div class="setting__time">
+                <div class="setting__time-number js-break">5</div>
+                <div class="setting__time-unit">min</div>
+              </div>
+              <div class="setting__adjustment">-</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<audio src="dzin.MP3" autoplay="autoplay"></audio>
+
+</html>
