@@ -8,9 +8,7 @@ const timeSession = document.querySelector('.js-session');
 const timeBreak = document.querySelector('.js-break');
 const outputTimeMinutes = document.querySelector('.container__time-minut');
 const outputTimeSecond = document.querySelector('.container__time-second');
-//const timerStart = document.querySelector('.container__start');
-//const timerReset = document.querySelector('.container__reset');
-const btn = document.querySelector('.container__button');
+const btnActive = document.querySelector('.container__button');
 const title = document.querySelector('.container__sub-title');
 
 if (JSON.parse(localStorage.getItem('minutesBreak')) == null
@@ -34,7 +32,7 @@ let timerActive = '';
 
 ChangeTimeBreak.addEventListener('click', (event) => {
     const { target } = event;
-    let timeMinutes = Number(timeBreak.textContent);
+    let timeMinutes = Number(JSON.parse(localStorage.getItem('minutesBreak')));
     if (target.textContent === '+') {
         timeMinutes += 1;
         timeBreak.innerHTML = timeMinutes;
@@ -102,7 +100,7 @@ const timer = () => {
 
 // Старт таймера
 
-btn.addEventListener('click', (event) => {
+btnActive.addEventListener('click', (event) => {
     const { target } = event;
     if (target.textContent === 'Start' && !startTimer) {
         startTimer = true;
