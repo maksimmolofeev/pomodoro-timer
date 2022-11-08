@@ -1,5 +1,3 @@
-import { nanoid } from "nanoid";
-
 import "./index.scss";
 
 const ChangeTimeSession = document.querySelector('.js-setting-session');
@@ -11,11 +9,13 @@ const outputTimeSecond = document.querySelector('.container__time-second');
 const btnActive = document.querySelector('.container__button');
 const title = document.querySelector('.container__sub-title');
 
-if (JSON.parse(localStorage.getItem('minutesBreak')) == null
-    || JSON.parse(localStorage.getItem('minutesSession')) == null) {
+if (JSON.parse(localStorage.getItem('minutesBreak')) == null) {
         localStorage.setItem("minutesBreak", JSON.stringify(5));
-        localStorage.setItem("minutesSession", JSON.stringify(25));
     }
+
+if (JSON.parse(localStorage.getItem('minutesSession')) == null) {
+    localStorage.setItem("minutesSession", JSON.stringify(25));
+}
 
 timeBreak.innerHTML = JSON.parse(localStorage.getItem('minutesBreak'));
 timeSession.innerHTML = JSON.parse(localStorage.getItem('minutesSession'))
@@ -25,7 +25,6 @@ let second = 59;
 let minutes = Number(JSON.parse(localStorage.getItem('minutesSession'))) - 1;
 let countIteration = 0;
 let startTimer = false;
-let isTimerActive = false;
 let timerActive = '';
 
 // Настрайка времени break, кнопки + и -
